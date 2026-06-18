@@ -58,7 +58,7 @@ function App() {
 
       <Route
         element={
-          <ProtectedRoute>
+          <ProtectedRoute allowedRole="employee">
             <EmployeeLayout />
           </ProtectedRoute>
         }
@@ -108,7 +108,11 @@ function App() {
 
       <Route
         path="/admin"
-        element={<AdminLayout />}
+        element={
+          <ProtectedRoute allowedRole="admin">
+            <AdminLayout />
+          </ProtectedRoute>
+        }
       >
 
         <Route
