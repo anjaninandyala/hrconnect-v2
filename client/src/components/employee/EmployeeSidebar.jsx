@@ -51,15 +51,16 @@ const EmployeeSidebar = () => {
       path: "/employee/documents",
     },
     {
-      title: "Settings",
-      icon: Settings,
-      path: "/employee/settings",
-    },
-    {
       title: "Leave",
       icon: CalendarDays,
       path: "/employee/leave",
     },
+    {
+      title: "Settings",
+      icon: Settings,
+      path: "/employee/settings",
+    },
+    
   ];
 
   return (
