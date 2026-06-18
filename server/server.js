@@ -10,6 +10,7 @@ const employeeRoutes = require("./routes/employeeRoutes");
 const documentRoutes = require("./routes/documentRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const leaveRoutes = require("./routes/leaveRoutes");
+
 dotenv.config();
 
 connectDB();

@@ -130,7 +130,7 @@ const EmployeeDetails = () => {
                 <Badge
                   className={
                     statusStyles[
-                      employee.status
+                    employee.status
                     ]
                   }
                 >
@@ -216,8 +216,8 @@ const EmployeeDetails = () => {
               {
                 employee.personalDetails?.dateOfBirth
                   ? new Date(
-                      employee.personalDetails.dateOfBirth
-                    ).toLocaleDateString()
+                    employee.personalDetails.dateOfBirth
+                  ).toLocaleDateString()
                   : "-"
               }
             </p>
@@ -390,18 +390,20 @@ const EmployeeDetails = () => {
               (doc, index) => (
 
                 <a
+
                   key={index}
-                  href={`http://localhost:5000/${doc.filePath}`}
+                  href={`https://hrconnect-v2.onrender.com/${doc.filePath}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                
                   className="
-                    px-4
-                    py-2
-                    rounded-xl
-                    bg-blue-100
-                    text-blue-700
-                    hover:bg-blue-200
-                    transition
+                  px-4
+                  py-2
+                  rounded-xl
+                  bg-blue-100
+                  text-blue-700
+                  hover:bg-blue-200
+                  transition
                   "
                 >
                   {doc.documentType}
