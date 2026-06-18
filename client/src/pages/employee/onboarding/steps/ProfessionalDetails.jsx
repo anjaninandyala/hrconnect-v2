@@ -75,25 +75,38 @@ const ProfessionalDetails = ({
   ]);
 
   return (
+
     <div>
 
-      <h2 className="text-2xl font-semibold mb-6">
-        Professional Details
-      </h2>
+      {/* HEADER */}
+
+      <div className="mb-8">
+
+        <h2 className="text-3xl font-bold">
+          Work Experience & Department Preferences
+        </h2>
+
+        <p className="text-gray-500 mt-2">
+          Tell us about your previous work experience
+          and preferred department.
+        </p>
+
+      </div>
 
       <div className="space-y-5">
 
-        {/* Previous Organization */}
+        {/* PREVIOUS COMPANY */}
 
         <div>
+
           <label className="block mb-2 font-medium">
-            Previous Organization
+            Previous Company
           </label>
 
           <input
             type="text"
             name="previousOrganization"
-            placeholder="Previous Organization"
+            placeholder="Enter Previous Company Name"
             value={
               formData.professionalDetails
                 ?.previousOrganization || ""
@@ -102,44 +115,20 @@ const ProfessionalDetails = ({
             className="
               w-full
               border
-              rounded-lg
+              rounded-xl
               px-4
               py-3
             "
           />
+
         </div>
 
-        {/* Company Name */}
+        {/* PREVIOUS DESIGNATION */}
 
         <div>
+
           <label className="block mb-2 font-medium">
-            Company Name
-          </label>
-
-          <input
-            type="text"
-            name="companyName"
-            placeholder="Company Name"
-            value={
-              formData.professionalDetails
-                ?.companyName || ""
-            }
-            onChange={handleChange}
-            className="
-              w-full
-              border
-              rounded-lg
-              px-4
-              py-3
-            "
-          />
-        </div>
-
-        {/* Designation */}
-
-        <div>
-          <label className="block mb-2 font-medium">
-            Designation
+            Previous Designation
             <span className="text-red-500 ml-1">
               *
             </span>
@@ -149,7 +138,7 @@ const ProfessionalDetails = ({
             type="text"
             name="designation"
             required
-            placeholder="Designation"
+            placeholder="Enter Previous Designation"
             value={
               formData.professionalDetails
                 ?.designation || ""
@@ -158,18 +147,20 @@ const ProfessionalDetails = ({
             className="
               w-full
               border
-              rounded-lg
+              rounded-xl
               px-4
               py-3
             "
           />
+
         </div>
 
-        {/* Department */}
+        {/* PREFERRED DEPARTMENT */}
 
         <div>
+
           <label className="block mb-2 font-medium">
-            Department
+            Preferred Department
             <span className="text-red-500 ml-1">
               *
             </span>
@@ -186,13 +177,14 @@ const ProfessionalDetails = ({
             className="
               w-full
               border
-              rounded-lg
+              rounded-xl
               px-4
               py-3
             "
           >
+
             <option value="">
-              Select Department
+              Select Preferred Department
             </option>
 
             <option value="HR">
@@ -214,15 +206,17 @@ const ProfessionalDetails = ({
             <option value="Sales">
               Sales
             </option>
+
           </select>
+
         </div>
 
-        {/* Experience Start */}
+        {/* EMPLOYMENT START DATE */}
 
         <div>
 
           <label className="block mb-2 font-medium">
-            Experience Start Date
+            Previous Employment Start Date
           </label>
 
           <input
@@ -236,7 +230,7 @@ const ProfessionalDetails = ({
             className="
               w-full
               border
-              rounded-lg
+              rounded-xl
               px-4
               py-3
             "
@@ -244,12 +238,12 @@ const ProfessionalDetails = ({
 
         </div>
 
-        {/* Experience End */}
+        {/* EMPLOYMENT END DATE */}
 
         <div>
 
           <label className="block mb-2 font-medium">
-            Experience End Date
+            Previous Employment End Date
           </label>
 
           <input
@@ -263,7 +257,7 @@ const ProfessionalDetails = ({
             className="
               w-full
               border
-              rounded-lg
+              rounded-xl
               px-4
               py-3
             "
@@ -271,15 +265,36 @@ const ProfessionalDetails = ({
 
         </div>
 
-        {/* Experience Calculation */}
+        {/* EXPERIENCE CARD */}
 
-        <div className="bg-blue-50 p-4 rounded-xl">
+        <div
+          className="
+            bg-blue-50
+            border
+            border-blue-100
+            rounded-2xl
+            p-5
+          "
+        >
 
-          <p className="font-medium">
-            Experience Calculated
+          <p
+            className="
+              text-sm
+              text-blue-600
+              font-medium
+            "
+          >
+            Total Work Experience
           </p>
 
-          <p className="text-blue-700">
+          <p
+            className="
+              text-2xl
+              font-bold
+              text-blue-700
+              mt-1
+            "
+          >
 
             {
               formData.professionalDetails
@@ -300,6 +315,7 @@ const ProfessionalDetails = ({
       </div>
 
     </div>
+
   );
 };
 
