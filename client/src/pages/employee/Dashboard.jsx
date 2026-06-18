@@ -702,7 +702,7 @@ const Dashboard = () => {
 
                       <>
                         <a
-                          href={`http://localhost:5000/${doc.filePath}`}
+                          href={`https://hrconnect-v2.onrender.com${doc.filePath}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="
@@ -718,7 +718,7 @@ const Dashboard = () => {
                         </a>
 
                         <a
-                          href={`http://localhost:5000/${doc.filePath}`}
+                          href={`https://hrconnect-v2.onrender.com${doc.filePath}`}
                           download
                           className="
                     px-4

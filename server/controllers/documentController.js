@@ -27,10 +27,8 @@ const uploadDocument = async (req, res) => {
 
     employee.documents.push({
       documentType: documentType || "Document",
-
       fileName: req.file.filename,
-
-      filePath: req.file.path.replace(/\\/g, "/"),
+      filePath: `/uploads/${req.file.filename}`,
     });
 
     await employee.save();
@@ -38,7 +36,7 @@ const uploadDocument = async (req, res) => {
     console.log(
       "DOCUMENT SAVED:",
       employee.documents[
-        employee.documents.length - 1
+      employee.documents.length - 1
       ]
     );
 
@@ -46,7 +44,7 @@ const uploadDocument = async (req, res) => {
       message: "Document Uploaded Successfully",
       document:
         employee.documents[
-          employee.documents.length - 1
+        employee.documents.length - 1
         ],
     });
 

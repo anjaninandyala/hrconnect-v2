@@ -392,7 +392,7 @@ const EmployeeDetails = () => {
                 <a
 
                   key={index}
-                  href={`https://hrconnect-v2.onrender.com/${doc.filePath}`}
+                  href={`https://hrconnect-v2.onrender.com${doc.filePath}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 
