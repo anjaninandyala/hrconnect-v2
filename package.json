@@ -1,0 +1,14 @@
+{
+  "name": "hrconnect-v2",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "concurrently": "^9.0.0",
+    "lucide-react": "^1.18.0",
+    "react-hot-toast": "^2.6.0"
+  }
+}
