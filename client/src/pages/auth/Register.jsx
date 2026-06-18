@@ -35,17 +35,13 @@ const Register = () => {
                 formData
             );
 
-            localStorage.setItem(
-                "token",
-                data.token
-            );
-
             toast.success(
-                "Registration Successful"
+                "Registration Successful. Please Login."
             );
 
-            window.location.href =
-                "/employee/dashboard";
+            setTimeout(() => {
+                navigate("/auth/login");
+            }, 1500);
         } catch (error) {
             toast.error(
                 error.response?.data?.message ||
