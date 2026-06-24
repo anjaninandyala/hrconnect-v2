@@ -27,8 +27,11 @@ const uploadDocument = async (req, res) => {
 
     employee.documents.push({
       documentType: documentType || "Document",
+
       fileName: req.file.filename,
-      filePath: `/uploads/${req.file.filename}`,
+
+      filePath:
+        `https://hrconnect-v2.onrender.com/uploads/${req.file.filename}`,
     });
 
     await employee.save();
